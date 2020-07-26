@@ -1,0 +1,39 @@
+html
+    header
+        title MyScentJourney
+        include ./template/styles
+    body
+        header.toolbar.toolbar-header
+            h1.title Acceder
+
+        br
+        br
+        br
+        .row
+            .col-4
+            .col-4
+                center
+                    img(src="/assets/img/MyScentJourney.png" , width="250px").img-fluid
+                    h2 MyScentJourney
+                br
+                label Nombre de usuario
+                input.form-control(type='text' placeholder='Usuario')
+                label Contraseña
+                input.form-control(type='password' placeholder='Contraseña')
+                br
+                br
+                .row
+                    .col-4
+                    .col-4
+                        a(href='/panel').btn-default.btn-block.btn Acceder
+                    .col-4
+
+
+            .col-4
+
+
+        footer.toolbar.toolbar-footer.fixed-bottom
+            .toolbar-actions
+
+
+        include ./template/scripts

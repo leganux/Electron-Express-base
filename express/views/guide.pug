@@ -1,0 +1,30 @@
+html
+    header
+        title MyScentJourney
+        include ./template/styles
+    body
+        header.toolbar.toolbar-header
+            h1.title Guias
+            .toolbar-actions
+                .btn-group
+                    button.btn.btn-default.icon-text#menu_up_salir
+                        span.icon.icon-cancel
+                        | Salir
+                    button.btn.btn-default.icon-text#menu_up_recargar
+                        span.icon.icon-arrows-ccw
+                        | Recargar
+                a.btn.btn-default.pull-right(href="/notifications")
+                    span.icon.icon-megaphone
+        .row
+            .col-2.ml-0.pr-0(style="border-right:1px solid #d1cfd1;")
+                include ./template/nav
+            .col-10.mr-0.pl-0
+        footer.toolbar.toolbar-footer.fixed-bottom
+
+        include ./template/scripts
+        script.
+            $(document).ready(function () {
+                $('#menu-guias').addClass('active')
+            })
+        script(src='/assets/control/common.js')
+        //script(src='/assets/control/panel.js')

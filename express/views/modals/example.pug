@@ -1,0 +1,14 @@
+#exampleModalLong.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLongTitle' aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header.toolbar.toolbar-header
+                h1.title Header with actions
+
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+            .modal-body
+                | ...
+            .modal-footer.toolbar.toolbar-footer
+
+                button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Save changes

@@ -1,0 +1,34 @@
+{
+  "name": "myscentjourney_app",
+  "version": "1.0.0",
+  "description": "A MyScentJourney APP made with electron and express",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "dev": "nodemon ./express/server.js",
+    "build-mac": "electron-packager ./ MyScentJourney  --platform=darwin --arch=x64   --overwrite  --icon=ElectronApp/assets/icons/icon.icns --prune=true  --out=./../release-builds",
+    "build-windows": "electron-packager ./ MyScentJourney --overwrite --asar=true --platform=win32 --arch=x64 --icon=ElectronApp/assets/icons/icon.ico --prune=true --out=./../release-builds --version-string.CompanyName=Private --version-string.FileDescription=Private --version-string.ProductName=“MyscentJourney”"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "APP",
+    "MyScentJourney",
+    "Perfume",
+    "online",
+    "products"
+  ],
+  "author": "Angel Erick Cruz Olivera",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "nodemon": "^2.0.4"
+
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
+}

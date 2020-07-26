@@ -1,0 +1,60 @@
+html
+    header
+        title MyScentJourney
+        include ./template/styles
+    body
+        header.toolbar.toolbar-header
+            h1.title Productos
+            .toolbar-actions
+                .btn-group
+                    button.btn.btn-default.icon-text#menu_up_salir
+                        span.icon.icon-cancel
+                        | Salir
+                    button.btn.btn-default.icon-text#menu_up_recargar
+                        span.icon.icon-arrows-ccw
+                        | Recargar
+                a.btn.btn-default.pull-right(href="/notifications")
+                    span.icon.icon-megaphone
+        .row
+            .col-2.ml-0.pr-0(style="border-right:1px solid #d1cfd1;")
+                include ./template/nav
+            .col-10.mr-0.pl-0
+                .container
+                    br
+                    .row
+                        .col-4
+                            button.btn.btn-default
+                                i.fas.fa-file-csv
+                                |   Descargar CSV
+                            button.btn.btn-default
+                                i.fas.fa-file-csv
+                                |   Subir CSV
+
+                        .col-4
+                        .col-4
+                            button.btn.btn-block.btn-default Nuevo
+                    .row
+                        .col-12.p-4
+                            div
+                                table.table-striped#datatable
+                                    thead
+                                        tr
+                                            th ID
+                                            th Producto
+                                            th Marca
+                                            th Presentación (ML)
+                                            th Costo Botella
+                                            th % Ganancia
+                                            th Precio por ML
+                                            th Reserva ML
+                                            th Acciones
+
+        footer.toolbar.toolbar-footer.fixed-bottom
+
+        include ./template/scripts
+        script.
+            $(document).ready(function () {
+                $('#menu-productos').addClass('active')
+            })
+        script(src='/assets/control/common.js')
+        script(src='/assets/control/products.js')
